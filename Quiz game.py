@@ -38,3 +38,4 @@ else:
     print("Sorry. Try again.")
 
 print("You got " + str(score) + " points!") # string because score is a number; convert number to string
+print("You got a score of " + str((score/4) * 100) + "%!")
