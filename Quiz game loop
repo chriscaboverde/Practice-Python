@@ -1,0 +1,16 @@
+# From: https://www.youtube.com/watch?v=DLn3jOsNRVE
+
+print("Welcome to my computer quiz!")
+play = input("Do you want to play a game? ")
+if play.lower() != "yes": #convert all yes answers to lower case
+    quit()
+print("OK! Let's play!")
+answer = False
+
+while answer != "central processing unit":
+    answer = input("What does CPU stand for? ")
+    if answer != "central processing unit":
+        print("Sorry. Try again.")
+    elif answer == "central processing unit":
+        print("Correct!")
+
