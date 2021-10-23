@@ -28,10 +28,18 @@ else:
     print("Correct!")
     score += 1
 
+answer = input("What does perestroika literally mean? ")
+if answer != "reconstruction":
+    print("Sorry. Try again.")
+else:
+    print("Correct!")
+    score += 1
+
+print("Bonus round!")
 answer = input("What is Chandler Bing's job? ")
 if answer == "statistical analysis and data reconfiguration":
     print("Correct!")
-    score += 1
+    score += 2
 elif answer == "transponster":
     print("That's not even a word!")
 else:
