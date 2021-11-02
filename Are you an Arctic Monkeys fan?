@@ -1,0 +1,91 @@
+# Arctic Monkeys
+
+print("Welcome to the Arctic Monkeys quiz!")
+play = input("Are you a fan of the Arctic Monkeys?: ")
+if play.lower() != "yes":
+    print("Ok. Goodbye.")
+
+triesq1 = 2
+triesq2 = 2
+triesq3 = 2
+triesq4 = 2
+score = 0
+
+q1 = input("1.) What is the Arctic Monkeys' best selling album? "
+               "a. Humbug"
+               " b. Whatever People Say I Am, That's What I'm Not "
+               " c. Tranquility Base Hotel & Casino "
+               " d. AM?: ")
+if q1.lower() != "d":
+    print("Try again.")
+    triesq1 -= 1
+    if triesq1 == 1:
+        q1 = input("1.) What is the Arctic Monkeys' best selling album? "
+               "a. Humbug"
+               " b. Whatever People Say I Am, That's What I'm Not "
+               " c. Tranquility Base Hotel & Casino "
+               " d. AM?: ")
+        if q1.lower() != "d":
+            triesq1 -= 1
+            if triesq1 == 0:
+                print("Sorry. The correct answer is D.")
+else:
+    print("Correct!")
+    score += 1
+
+q2 = input("2.) Complete the lyric: 'Brian! Top marks for __ __!: ")
+if q2.lower() != "not trying":
+    print("Try again.")
+    triesq2 -= 1
+    if triesq2 == 1:
+        q2 = input("2.) Complete the lyric: 'Brian, top marks for __ __.: ")
+        if q2.lower() != "not trying":
+            triesq2 -= 1
+            if triesq2 == 0:
+                print("Sorry. The correct answer is 'not trying'.")
+else:
+    print("Correct!")
+    score += 1
+
+q3 = input("3.) The Arctic Monkeys are from which city in the UK?: ")
+if q3.lower() == "Sheffield":
+    print("Correct!")
+    score += 1
+    if triesq3 == 1:
+        q3 = input("3.) The Arctic Monkeys are from which city in the UK?: ")
+        if q3.lower() != "Sheffield":
+            triesq3 -= 1
+            if triesq3 == 0:
+                print("Sorry. The correct answer is Sheffield.")
+else:
+    print("Correct!")
+    score += 1
+    triesq3 -= 1
+
+q4 = input("4.) Where did they record the 'Suck It and See' album?: ")
+if q4.lower() == "Los Angeles" or q4.lower() == "LA":
+    print("Correct!")
+    score += 1
+    if triesq4 == 1:
+        q4 = input("3.) Where did they record the 'Suck It and See' album?: ")
+        if q4.lower() != "Los Angeles" or q4.lower() == "LA":
+            triesq4 -= 1
+            if triesq4 == 0:
+                print("Sorry. The correct answer is Los Angeles or LA.")
+else:
+    print("Correct!")
+    score += 1
+    triesq3 -= 1
+
+
+
+if score == 4:
+    print("You got " + str(score) + " out of 4 points! You are a super Arctic Monkeys fan!")
+if score == 3:
+    print("You got " + str(score) + " out of 4 points! You are a good Arctic Monkeys fan!")
+if score == 2:
+    print("You got " + str(score) + " out of 4 points! You are a so-so Arctic Monkeys fan!")
+if score == 1:
+    print("You got " + str(score) + " out of 4 points! You are a pathetic Arctic Monkeys fan!")
+if score == 0:
+    print("You got " + str(score) + " out of 3 points! You are NOT an Arctic Monkeys fan!")
